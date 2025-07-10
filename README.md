@@ -23,7 +23,10 @@ source root/load_salaries2.dump ;
 source root/load_salaries3.dump ;
 
 source root/show_elapsed.sql ;
+```
 
+## Confirma que la restauración de la BD se realizó correctamente.
+```` 
 
 MariaDB [employees]> use employees;
 Database changed
