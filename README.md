@@ -19,4 +19,23 @@ source root/load_salaries2.dump ;
 source root/load_salaries3.dump ;
 
 source root/show_elapsed.sql ;
+
+
+MariaDB [employees]> use employees;
+Database changed
+MariaDB [employees]> show tables;
++----------------------+
+| Tables_in_employees  |
++----------------------+
+| current_dept_emp     |
+| departments          |
+| dept_emp             |
+| dept_emp_latest_date |
+| dept_manager         |
+| employees            |
+| salaries             |
+| titles               |
++----------------------+
+8 rows in set
+
 ```
