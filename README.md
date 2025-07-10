@@ -1,7 +1,7 @@
 
-Diagrama Entidad Relación
+## Diagrama Entidad Relación
 
-[red](https://github.com/luisreylara/db_employees_MariaDB/blob/main/employees.png)
+![red](https://github.com/luisreylara/db_employees_MariaDB/blob/main/employees.png)
 
 ## Comandos para restaurar la BD employees
 
