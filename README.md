@@ -2,7 +2,7 @@
 ## Comandos para restaurar la BD employees
 
 ```
-source root/emplyees.sql ;
+source root/employees.sql ;
 
 source root/load_departments.dump ;
 
