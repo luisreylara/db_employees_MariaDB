@@ -120,4 +120,3 @@ first_name: Georgi
  hire_date: 1986-06-26
 1 row in set (0.001 sec)
 
-```
