@@ -18,9 +18,50 @@ SELECT first_name, last_name FROM employees WHERE last_name LIKE 'Tempest%';
 ```
 explain SELECT first_name, last_name FROM employees WHERE last_name LIKE 'Tempest%';
 ```
-select count(*) from employees;
+** Observamos lo siguiente:
+```
+explain SELECT first_name, last_name FROM employees WHERE last_name LIKE 'Tempest%';
++------+-------------+-----------+------+---------------+------+---------+------+--------+-------------+
+| id   | select_type | table     | type | possible_keys | key  | key_len | ref  | rows   | Extra       |
++------+-------------+-----------+------+---------------+------+---------+------+--------+-------------+
+|    1 | SIMPLE      | employees | ALL  | NULL          | NULL | NULL    | NULL | 299290 | Using where |
++------+-------------+-----------+------+---------------+------+---------+------+--------+-------------+
+1 row in set (0.002 sec)
+```
+> rows: revisó 299290 registros para encontrar la respuesta
+> possible_keys: no tiene índices para que apoyen la búsqueda
 
+** Recordemos el total de registros que contiene la tabla employees
+```
+select count(*) from employees;
++----------+
+| count(*) |
++----------+
+|   300024 |
++----------+
+1 row in set (0.042 sec)
+```
+** Mostramos los índices que contiene la tabla employees
+```
 SHOW INDEX FROM employees \G
+
+*************************** 1. row ***************************
+        Table: employees
+   Non_unique: 0
+     Key_name: PRIMARY
+ Seq_in_index: 1
+  Column_name: emp_no
+    Collation: A
+  Cardinality: 299290
+     Sub_part: NULL
+       Packed: NULL
+         Null: 
+   Index_type: BTREE
+      Comment: 
+Index_comment: 
+      Ignored: NO
+1 row in set (0.001 sec)
+```
 describe employees;
 
 ALTER TABLE employees ADD INDEX index_lastname (last_name);
