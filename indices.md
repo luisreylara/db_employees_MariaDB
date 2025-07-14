@@ -62,8 +62,23 @@ Index_comment:
       Ignored: NO
 1 row in set (0.001 sec)
 ```
-describe employees;
 
+** Este comando también nos muestra los índices que contiene la tabla employees
+```
+describe employees;
+```
+** Agregamos un índice en el atributo ***last_name***
+```
 ALTER TABLE employees ADD INDEX index_lastname (last_name);
 
+```
+
+
+
+
+
+
+** El siguiente comando elimina el índice creado
+```
 ALTER TABLE employees DROP INDEX index_name;
+```
