@@ -140,7 +140,7 @@ Index_comment:
 key:index_last_name
 possible_keys: index_last_name
 rows: 161
-Estra: using index condition
+Extra: using index condition
 ```
 ## Lo anterior demuestra el total de registros recorridos para que la consulta ejecute con eficiencia la búsqueda.
 
