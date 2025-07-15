@@ -27,3 +27,4 @@ drop table if exists libros;
  insert into libros(titulo, autor, editorial, precio, stock)
   values('Aprenda PHP','Mario Molina','Emece',45,200);
 
+select * from libros;
