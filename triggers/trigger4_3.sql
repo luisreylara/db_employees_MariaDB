@@ -7,3 +7,5 @@ select * from ventas;
 
 delete from ventas where codigo = 111;
 delete from ventas where codigo = 333;
+
+select * from log_borrado_ventas;
